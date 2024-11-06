@@ -1,15 +1,32 @@
-import {Table } from "antd";
+import { Table, Tabs } from "antd";
 import React, { useEffect, useState } from "react";
 import { FilePdfOutlined } from "@ant-design/icons";
-
+import { Header } from "antd/es/layout/layout";
+import autodema from "./assets/autodema.png"
 function App() {
-  const [cotizaciones, setCotizaciones] = useState([]);
+  const [bienes, setBienes] = useState([])
+  const [servicios, setServicios] = useState([])
 
   useEffect(() => {
 
-    getCotizaciones();
+    getBienes();
+    getServicios()
   }, []);
-  const getCotizaciones = async () => {
+  const getBienes = async () => {
+    const response = await fetch(
+      `${process.env.REACT_APP_BASE}/cotizaciones/completada?tipo=B`,
+      {
+        method: "GET",
+        credentials: "include",
+      }
+    );
+    const info = await response.json();
+
+    if (info) {
+      setBienes(info);
+    }
+  };
+  const getServicios = async () => {
     const response = await fetch(
       `${process.env.REACT_APP_BASE}/cotizaciones/completada?tipo=S`,
       {
@@ -20,7 +37,7 @@ function App() {
     const info = await response.json();
 
     if (info) {
-      setCotizaciones(info);
+      setServicios(info);
     }
   };
 
@@ -54,33 +71,73 @@ function App() {
       title: "PDF",
       render: (_, record) => (
         <div>
-        <FilePdfOutlined
-          style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
-          onClick={() => {
-            if (record.pdf) {
-              window.open(record.pdf, "_blank");
-            } else {
-              alert("No hay PDF disponible para este registro.");
-            }
-          }}
-        />
-      </div>
+          <FilePdfOutlined
+            style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
+            onClick={() => {
+              if (record.pdf) {
+                window.open(record.pdf, "_blank");
+              } else {
+                alert("No hay PDF disponible para este registro.");
+              }
+            }}
+          />
+        </div>
       ),
       key: "action",
       align: "center",
     },
 
   ];
+
+  const items = [
+    {
+      key: '1',
+      label: 'Bienes',
+      children: <div style={{ marginTop: "20px", padding: "35px" }}>
+        <Table
+          columns={columns}
+          dataSource={bienes?.map((item, index) => ({
+            ...item,
+            key: item.id || index,
+          }))}
+        />
+      </div>,
+    },
+    {
+      key: '2',
+      label: 'Servicios',
+      children: <div style={{ marginTop: "20px", padding: "35px" }}>
+        <Table
+          columns={columns}
+          dataSource={servicios?.map((item, index) => ({
+            ...item,
+            key: item.id || index,
+          }))}
+        />
+      </div>,
+    },
+
+  ];
+  // const onChange = (key) => {
+  //   if (key === 1) {
+  //     getBienes()
+  //   } else {
+  //     getServicios()
+  //   }
+  // };
+
   return (
-    <div style={{ marginTop: "20px", padding:"35px" }}>
-      <Table
-        columns={columns}
-        dataSource={cotizaciones?.map((item, index) => ({
-          ...item,
-          key: item.id || index,
-        }))}
-      />
-    </div>
+    <>
+      <Header style={{ backgroundColor: "white", display: "flex", justifyContent: "space-between", color: "black" }}>
+        <section><img src={autodema} style={{ width: "200px", height: "40px", marginTop:"10px" }} /></section>
+        <section style={{fontWeight:"bold"}}>COTIZACIÓN DE BIENES Y SERVICIOS</section>
+        <section></section>
+
+      </Header>
+      <div style={{ padding: "35px" }}>
+        <Tabs defaultActiveKey="1" items={items} />
+      </div>
+    </>
   );
 }
 
