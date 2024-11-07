@@ -170,7 +170,7 @@ function App() {
               <FilePdfOutlined
                 style={{ color: "red" }}
                 onClick={() => {
-                  window.open("http://10.30.1.46:8086/uploads/DECLACION%20JURADA%20-%20FORMATOS%20PARA%20PROVEEDORES.pdf.pdf", "_blank");
+                  window.open("http://10.30.1.46:8086/uploads/DECLACION%20JURADA%20-%20FORMATOS%20PARA%20PROVEEDORES.pdf", "_blank");
 
                 }}
               />  </Tooltip>
