@@ -224,7 +224,7 @@ function App() {
 
   return (
     <>
-      <Header style={{ backgroundColor: "#4DA362", display: "flex", justifyContent: "space-between", color: "black" }}>
+      <Header style={{ backgroundColor: "#4DA362", display: "flex", justifyContent: "space-between", color: "white" }}>
         <section></section>
         <section style={{ fontWeight: "bold" }}>COTIZACIÓN DE BIENES Y SERVICIOS</section>
         <section></section>
