@@ -193,8 +193,8 @@ function App() {
                 }} />
 
             </Tooltip>
-            <Tooltip title="FORMATO DE DECLARACION JURADA INCOMPATIBLES">
-              <FilePdfOutlined style={{ color: "blue" }}
+            <Tooltip title="FORMATO DE DECLARACION JURADA INCOMPATIBILIDADES">
+              <FilePdfOutlined style={{ color: "red" }}
                 onClick={() => {
                   window.open("http://10.30.1.46:8086/uploads/FORMATO-DE-DECLARACI%C3%93N-JURADA-INCOMPATIBILIDADES.pdf", "_blank");
 
