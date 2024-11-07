@@ -21,7 +21,8 @@ function App() {
       }
     );
     const info = await response.json();
-
+    console.log(info);
+    
     if (info) {
       setBienes(info);
     }
