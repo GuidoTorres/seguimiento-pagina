@@ -1,6 +1,6 @@
-import { Table, Tabs } from "antd";
+import { Flex, Table, Tabs, Tooltip } from "antd";
 import React, { useEffect, useState } from "react";
-import { FilePdfOutlined } from "@ant-design/icons";
+import { FilePdfOutlined, FileWordOutlined,FileExcelOutlined } from "@ant-design/icons";
 import { Header } from "antd/es/layout/layout";
 import autodema from "./assets/autodema.png"
 import dayjs from "dayjs";
@@ -23,7 +23,6 @@ function App() {
       }
     );
     const info = await response.json();
-    console.log(info);
 
     if (info) {
       setBienes(info);
@@ -49,9 +48,9 @@ function App() {
       title: "NOMBRE",
       render: (_, record) => (
         <p>
-            COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
+          COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
         </p>
-    ),      align: "center",
+      ), align: "center",
     },
     {
       title: "DESCRIPCIÓN",
@@ -96,26 +95,121 @@ function App() {
       key: '1',
       label: 'Bienes',
       children: <div style={{ marginTop: "20px", padding: "35px" }}>
-        <Table
-          columns={columns}
-          dataSource={bienes?.map((item, index) => ({
-            ...item,
-            key: item.id || index,
-          }))}
-        />
+        <>
+          <Flex gap={"20px"} justify="center" align="center">
+            <p>ANEXOS: </p>
+
+            <Tooltip title="CARTA CCI">
+              <FilePdfOutlined
+                style={{ color: "red" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/CARTA%20CCI.pdf", "_blank");
+
+                }}
+              />
+            </Tooltip>
+
+            <Tooltip title="FORMATO 07 DECLARACION JURADA">
+              <FilePdfOutlined
+                style={{ color: "red" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/FORMATO%2007%20DECLARACION%20JURADA.pdf", "_blank");
+
+                }}
+              />  </Tooltip>
+
+            <Tooltip title="FORMATO 05">
+              <FilePdfOutlined
+                style={{ color: "red" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/FORMATO%2005.pdf", "_blank");
+
+                }}
+              />  </Tooltip>
+
+
+            <Tooltip title="FORMATO N° 06 PROPUESTA ECONOMICA">
+              <FileWordOutlined style={{ color: "blue" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/FORMATO%20N°%2006%20PROPUESTA%20ECONOMICA.doc", "_blank");
+
+                }} />
+
+            </Tooltip>
+
+          </Flex>
+          <Table
+            columns={columns}
+            dataSource={bienes?.map((item, index) => ({
+              ...item,
+              key: item.id || index,
+            }))}
+          />
+        </>
       </div>,
     },
     {
       key: '2',
       label: 'Servicios',
       children: <div style={{ marginTop: "20px", padding: "35px" }}>
-        <Table
-          columns={columns}
-          dataSource={servicios?.map((item, index) => ({
-            ...item,
-            key: item.id || index,
-          }))}
-        />
+        <>
+          <Flex gap={"20px"} justify="center" align="center">
+            <p>ANEXOS: </p>
+
+            <Tooltip title="CARTA CCI">
+              <FilePdfOutlined
+                style={{ color: "red" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/CARTA%20CCI.pdf", "_blank");
+
+                }}
+              />
+            </Tooltip>
+
+            <Tooltip title="DECLARACION JURADA - FORMATOS PARA PROVEEDORES">
+              <FilePdfOutlined
+                style={{ color: "red" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/DECLARACION%20JURADA%20-%20FORMATOS%20PARA%20PROVEEDORES.pdf", "_blank");
+
+                }}
+              />  </Tooltip>
+
+            <Tooltip title="DECLARACIÓN JURADA PARENTESCO NEPOTISMO">
+              <FilePdfOutlined
+                style={{ color: "red" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/DECLARACIÓN%20JURADA%20PARENTESCO%20NEPOTISMO.pdf", "_blank");
+
+                }}
+              />  </Tooltip>
+
+
+            <Tooltip title="FORMATO DE COTIZACIÓN DE SERVICIOS">
+              <FileExcelOutlined style={{ color: "green" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/FORMATO%20DE%20COTIZACIÓN%20DE%20SERVICIOS.xlsx", "_blank");
+
+                }} />
+
+            </Tooltip>
+            <Tooltip title="FORMATO DE DECLARACION JURADA INCOMPATIBLES">
+              <FileWordOutlined style={{ color: "blue" }}
+                onClick={() => {
+                  window.open("http://10.30.1.46:8086/uploads/FORMATO%20DE%20DECLARACION%20JURADA%20INCOMPATIBLES.pdf", "_blank");
+
+                }} />
+
+            </Tooltip>
+          </Flex>
+          <Table
+            columns={columns}
+            dataSource={servicios?.map((item, index) => ({
+              ...item,
+              key: item.id || index,
+            }))}
+          />
+        </>
       </div>,
     },
 
