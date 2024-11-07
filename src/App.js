@@ -22,7 +22,7 @@ function App() {
     );
     const info = await response.json();
     console.log(info);
-    
+
     if (info) {
       setBienes(info);
     }
@@ -49,18 +49,8 @@ function App() {
       align: "center",
     },
     {
-      title: "SBN",
-      dataIndex: "sbn",
-      align: "center",
-    },
-    {
       title: "GLOSA",
       dataIndex: "glosa",
-      align: "center",
-    },
-    {
-      title: "SERVICIO",
-      dataIndex: "nombreItem",
       align: "center",
     },
     {
@@ -130,8 +120,8 @@ function App() {
   return (
     <>
       <Header style={{ backgroundColor: "white", display: "flex", justifyContent: "space-between", color: "black" }}>
-        <section><img src={autodema} style={{ width: "200px", height: "40px", marginTop:"10px" }} /></section>
-        <section style={{fontWeight:"bold"}}>COTIZACIÓN DE BIENES Y SERVICIOS</section>
+        <section><img src={autodema} style={{ width: "200px", height: "40px", marginTop: "10px" }} /></section>
+        <section style={{ fontWeight: "bold" }}>COTIZACIÓN DE BIENES Y SERVICIOS</section>
         <section></section>
 
       </Header>
