@@ -113,7 +113,7 @@ function App() {
               <FilePdfOutlined
                 style={{ color: "red" }}
                 onClick={() => {
-                  window.open("http://10.30.1.46:8087/uploads/FORMATO%20%2007%20DECLARACION%20JURADA.pdf", "_blank");
+                  window.open("http://10.30.1.46:8087/uploads/FORMATO%2007%20DECLARACION%20JURADA.pdf", "_blank");
 
                 }}
               />  </Tooltip>
