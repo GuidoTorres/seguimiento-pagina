@@ -224,8 +224,8 @@ function App() {
 
   return (
     <>
-      <Header style={{ backgroundColor: "white", display: "flex", justifyContent: "space-between", color: "black" }}>
-        <section><img src={autodema} style={{ width: "200px", height: "40px", marginTop: "10px" }} /></section>
+      <Header style={{ backgroundColor: "#4DA362", display: "flex", justifyContent: "space-between", color: "black" }}>
+        <section></section>
         <section style={{ fontWeight: "bold" }}>COTIZACIÓN DE BIENES Y SERVICIOS</section>
         <section></section>
 
