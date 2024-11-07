@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { FilePdfOutlined } from "@ant-design/icons";
 import { Header } from "antd/es/layout/layout";
 import autodema from "./assets/autodema.png"
+import dayjs from "dayjs";
+
 function App() {
   const [bienes, setBienes] = useState([])
   const [servicios, setServicios] = useState([])
@@ -44,18 +46,26 @@ function App() {
 
   const columns = [
     {
-      title: "COD",
-      dataIndex: "secSolMod",
-      align: "center",
+      title: "NOMBRE",
+      render: (_, record) => (
+        <p>
+            COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
+        </p>
+    ),      align: "center",
     },
     {
-      title: "GLOSA",
+      title: "DESCRIPCIÓN",
       dataIndex: "glosa",
       align: "center",
     },
     {
-      title: "DEPENDENCIA",
+      title: "OFICINA",
       dataIndex: "nombreDependencia",
+      align: "center",
+    },
+    {
+      title: "FECHA",
+      dataIndex: "fecha",
       align: "center",
     },
     {
@@ -77,6 +87,7 @@ function App() {
       key: "action",
       align: "center",
     },
+
 
   ];
 
