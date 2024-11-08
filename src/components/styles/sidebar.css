@@ -1,0 +1,19 @@
+.menu-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.ant-menu-item {
+    color: white !important; /* Color del texto para los ítems no seleccionados */
+}
+
+.ant-menu-item-selected {
+    background-color: white !important;
+    color: black !important; /* Color del texto para el ítem seleccionado */
+}
+
+.ant-menu-item:hover {
+    color: #b3e5c9 !important; /* Color del texto al pasar el ratón por encima */
+}
