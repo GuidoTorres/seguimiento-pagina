@@ -129,7 +129,7 @@ const Bienes = ({ setTitle }) => {
 
                             </Flex>
                         }
-                        type="warning"
+                        type="info"
                         showIcon
                     />
                     <Alert

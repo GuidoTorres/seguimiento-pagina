@@ -138,7 +138,7 @@ const Servicios = ({ setTitle }) => {
                                 </Tooltip>
                             </Flex>
                         }
-                        type="warning"
+                        type="info"
                         showIcon
                     />
                     <Alert
