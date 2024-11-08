@@ -88,7 +88,6 @@ const Bienes = ({ setTitle }) => {
 
                         description={
                             <Flex gap={"20px"} justify="center" align="center">
-                                <p>ANEXOS: </p>
 
                                 <Tooltip title="CARTA CCI">
                                     <FilePdfOutlined
