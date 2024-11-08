@@ -19,18 +19,18 @@ const Sidebar = () => {
   useEffect(() => {
     const items = [];
     items.push({
-      key: "/inicio",
+      key: "pagina/inicio",
       icon: <FileTextOutlined />,
       label: "Inicio",
     });
     items.push({
-      key: "/bienes",
+      key: "pagina/bienes",
       icon: <UserOutlined />,
       label: "Bienes",
     });
 
     items.push({
-      key: "/servicios",
+      key: "pagina/servicios",
       icon: <LaptopOutlined />,
       label: "Servicios",
     });

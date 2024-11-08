@@ -41,19 +41,19 @@ const MainPage = () => {
                     <Content className="content">
                         <Routes>
                         <Route
-                                path="/inicio"
+                                path="pagina/inicio"
                                 element={
                                     <Inicio setTitle={setTitle} />
                                 }
                             />
                             <Route
-                                path="/servicios"
+                                path="pagina/servicios"
                                 element={
                                     <Servicios setTitle={setTitle} />
                                 }
                             />
                             <Route
-                                path="/bienes"
+                                path="pagina/bienes"
                                 element={
                                     <Bienes setTitle={setTitle} />
                                 }
