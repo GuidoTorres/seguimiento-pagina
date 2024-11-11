@@ -47,7 +47,12 @@ const Servicios = ({ setTitle }) => {
             align: "center",
         },
         {
-            title: "FECHA",
+            title: "FECHA DE PUBLICACIÓN",
+            dataIndex: "fecha",
+            align: "center",
+        },
+        {
+            title: "FECHA DE VENCIMIENTO",
             dataIndex: "fecha",
             align: "center",
         },
@@ -89,7 +94,7 @@ const Servicios = ({ setTitle }) => {
 
                         description={
                             <Flex gap={"20px"} justify="center" align="center">
-                       
+
 
                                 <Tooltip title="CARTA CCI">
                                     <FilePdfOutlined

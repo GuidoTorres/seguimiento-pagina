@@ -39,15 +39,20 @@ const Bienes = ({ setTitle }) => {
         {
             title: "DESCRIPCIÓN",
             dataIndex: "glosa",
-            align: "center",
+            align: "left",
         },
         {
             title: "OFICINA",
             dataIndex: "nombreDependencia",
+            align: "left",
+        },
+        {
+            title: "FECHA DE PUBLICACIÓN",
+            dataIndex: "fecha",
             align: "center",
         },
         {
-            title: "FECHA",
+            title: "FECHA DE VENCIMIENTO",
             dataIndex: "fecha",
             align: "center",
         },

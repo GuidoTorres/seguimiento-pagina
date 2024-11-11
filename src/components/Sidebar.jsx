@@ -1,46 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { Flex, Menu } from "antd";
 import {
-  UserOutlined,
-  LaptopOutlined,
-  FileTextOutlined
+  ShoppingOutlined,
+  ContactsOutlined,
+  HomeOutlined
 } from "@ant-design/icons";
 import "./styles/sidebar.css";
 import imagen from "../assets/autodema.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [selectedKey, setSelectedKey] = useState("/"); // Inicializa la clave seleccionada
   const [menuItems, setMenuItems] = useState([]);
 
-  // Recuperar la información del localStorage
   useEffect(() => {
-    const items = [];
-    items.push({
-      key: "pagina/inicio",
-      icon: <FileTextOutlined />,
-      label: "Inicio",
-    });
-    items.push({
-      key: "pagina/bienes",
-      icon: <UserOutlined />,
-      label: "Bienes",
-    });
-
-    items.push({
-      key: "pagina/servicios",
-      icon: <LaptopOutlined />,
-      label: "Servicios",
-    });
-
+    const items = [
+      {
+        key: "/pagina/inicio",
+        icon: <HomeOutlined />,
+        label: "Inicio",
+      },
+      {
+        key: "/pagina/bienes",
+        icon: <ShoppingOutlined />,
+        label: "Bienes",
+      },
+      {
+        key: "/pagina/servicios",
+        icon: <ContactsOutlined />,
+        label: "Servicios",
+      }
+    ];
     setMenuItems(items);
   }, []);
 
   const handleMenuClick = (e) => {
-    setSelectedKey(e.key); // Cambia la clave seleccionada
-    navigate(e.key)
+    console.log(e.key);
+    
+    navigate(e.key);
   };
 
   return (
@@ -53,14 +52,12 @@ const Sidebar = () => {
 
       <Menu
         mode="inline"
-        selectedKeys={[selectedKey]}
+        selectedKeys={[location.pathname]}
         className="menu-bar"
-        items={menuItems} // Renderiza solo los ítems permitidos
+        items={menuItems}
         onClick={handleMenuClick}
-        style={{ backgroundColor: "#4f6f52", color: "white", marginTop:"50px" }}
+        style={{ backgroundColor: "#4f6f52", color: "white", marginTop: "50px" }}
       />
-
-
     </>
   );
 };

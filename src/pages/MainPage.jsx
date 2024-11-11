@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar';
 import { Button, Layout } from "antd";
 import "./styles/mainPage.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import HeaderContent from '../components/HeaderContent';
 import Bienes from '../components/Bienes';
@@ -12,7 +12,7 @@ import Inicio from '../components/Inicio';
 const { Sider, Header, Content } = Layout;
 
 const MainPage = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
     const [title, setTitle] = useState("Inicio");
 
     return (
@@ -40,7 +40,14 @@ const MainPage = () => {
                     </Header>
                     <Content className="content">
                         <Routes>
-                        <Route
+                            <Route path="/" element={<Navigate to="pagina/inicio" />} />
+                            <Route
+                                path="pagina"
+                                element={
+                                    <Inicio setTitle={setTitle} />
+                                }
+                            />
+                            <Route
                                 path="pagina/inicio"
                                 element={
                                     <Inicio setTitle={setTitle} />
