@@ -3,9 +3,11 @@ import dayjs from 'dayjs'
 import {
     FilePdfOutlined, FileExcelOutlined
 } from "@ant-design/icons";
-import { Alert, Flex, Tooltip, Table } from 'antd';
+import { Alert, Flex, Tooltip, Table, Input } from 'antd';
 const Servicios = ({ setTitle }) => {
     const [servicios, setServicios] = useState([])
+    const [searchTerm, setSearchTerm] = useState(""); // Estado para la búsqueda
+    const [filteredData, setFilteredData] = useState(servicios);
 
     useEffect(() => {
         setTitle("Servicios")
@@ -24,40 +26,42 @@ const Servicios = ({ setTitle }) => {
 
         if (info) {
             setServicios(info);
+            setFilteredData(info)
         }
     };
 
     const columns = [
         {
-            title: "NOMBRE",
+            title: <div style={{ textAlign: "center" }}>NOMBRE</div>,
             render: (_, record) => (
                 <p>
                     COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
                 </p>
-            ), align: "center",
+            ),
+            align: "left",
         },
         {
-            title: "DESCRIPCIÓN",
+            title: <div style={{ textAlign: "center" }}>DESCRIPCIÓN</div>,
             dataIndex: "glosa",
-            align: "center",
+            align: "left",
         },
         {
-            title: "OFICINA",
+            title: <div style={{ textAlign: "center" }}>OFICINA</div>,
             dataIndex: "nombreDependencia",
-            align: "center",
+            align: "left",
         },
         {
-            title: "FECHA DE PUBLICACIÓN",
+            title: <div style={{ textAlign: "center" }}>FECHA DE PUBLICACIÓN</div>,
             dataIndex: "fecha",
             align: "center",
         },
         {
-            title: "FECHA DE VENCIMIENTO",
-            dataIndex: "fecha",
+            title: <div style={{ textAlign: "center" }}>FECHA DE VENCIMIENTO</div>,
+            dataIndex: "fecha_vencimiento",
             align: "center",
         },
         {
-            title: "PDF",
+            title: <div style={{ textAlign: "center" }}>PDF</div>,
             render: (_, record) => (
                 <div>
                     <FilePdfOutlined
@@ -73,11 +77,21 @@ const Servicios = ({ setTitle }) => {
                 </div>
             ),
             key: "action",
-            align: "center",
+            align: "left",
         },
-
-
     ];
+
+
+    const handleSearch = (e) => {
+        const value = e.target.value;
+        setSearchTerm(value);
+
+        const filterData = servicios.filter(item =>
+            item.glosa.toLowerCase().includes(value.toLowerCase())
+        );
+
+        setFilteredData(filterData);
+    };
 
     return (
         <div style={{ marginTop: "-20px", paddingLeft: "35px", paddingRight: "35px" }}>
@@ -168,10 +182,10 @@ const Servicios = ({ setTitle }) => {
 
                 </Flex>
 
-
+                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción' style={{ marginTop: "10px", width: "300px", }} />
                 <Table
                     columns={columns}
-                    dataSource={servicios?.map((item, index) => ({
+                    dataSource={filteredData?.map((item, index) => ({
                         ...item,
                         key: item.id || index,
                     }))}

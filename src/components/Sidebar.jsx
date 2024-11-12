@@ -56,7 +56,7 @@ const Sidebar = () => {
         className="menu-bar"
         items={menuItems}
         onClick={handleMenuClick}
-        style={{ backgroundColor: "#4f6f52", color: "white", marginTop: "50px" }}
+        style={{ backgroundColor: "#00A859", color: "white", marginTop: "50px" }}
       />
     </>
   );
