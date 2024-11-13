@@ -36,9 +36,7 @@ const Sidebar = () => {
     setMenuItems(items);
   }, []);
 
-  const handleMenuClick = (e) => {
-    console.log(e.key);
-    
+  const handleMenuClick = (e) => {  
     navigate(e.key);
   };
 

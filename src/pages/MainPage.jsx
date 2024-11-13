@@ -12,7 +12,7 @@ import Inicio from '../components/Inicio';
 const { Sider, Header, Content } = Layout;
 
 const MainPage = () => {
-    const [collapsed, setCollapsed] = useState(true);
+    const [collapsed, setCollapsed] = useState(false);
     const [title, setTitle] = useState("Inicio");
 
     return (
