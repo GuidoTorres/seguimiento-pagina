@@ -161,7 +161,9 @@ const Bienes = ({ setTitle }) => {
                             <>
                                 1. Por correo electrónico: <strong>compras@pems.pe</strong>
                                 <br />
-                                2. En el asunto del correo se deberá colocar el numero de solicitud, la fecha limite de presentación de procesos via correo electrónico es de 2 diás hábiles.
+                                2. En el asunto del correo se deberá colocar el número de solicitud.
+                                <br />
+                                3. En caso de bienes específicos adjuntar la <strong>Ficha Técnica</strong> del producto ofertado.
                             </>
                         }
                         type="warning"

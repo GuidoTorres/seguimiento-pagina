@@ -1,12 +1,12 @@
 import { Alert } from 'antd'
 import React, { useEffect } from 'react'
 
-const Inicio = ({setTitle}) => {
-  useEffect(()=>{
+const Inicio = ({ setTitle }) => {
+  useEffect(() => {
     setTitle("Inicio")
-  },[])
+  }, [])
   return (
-    <div style={{ paddingLeft: "45px", paddingRight: "45px", display:"flex", justifyContent:"center",  flexDirection:"column" }}>
+    <div style={{ paddingLeft: "45px", paddingRight: "45px", display: "flex", justifyContent: "center", flexDirection: "column" }}>
 
       <Alert message=
         {
@@ -26,11 +26,27 @@ const Inicio = ({setTitle}) => {
           <>
             1. Una vez notificada la Orden de Compra/Servicio debera ser confirmada en forma inmediata para su atención correspondiente y en los plazos establecidos.
             <br />
-            2. La entrega de los bienes se realizara después de confirmada la Orden de Compra/Servicio, la Factura y Guía deberán deberan consignar fecha posterior a la confirmación.
+            2. La entrega de los bienes se realizará después de confirmada la Orden de Compra adjuntando los siguientes documentos en almacén:
+            <br />
+            -	Guía de Remisión (3 copias).
+            <br />
+            -	Copia de la orden de compra (3 copias).
+            <br />
+            -	Comprobante de Pago (2 copias), indicando al crédito.
+            <br />
+            La conformidad de los servicios se presentará al día siguiente hábil después de culminado la orden de servicio, adjuntando los siguientes documentos por Tramite Documentario:
+            <br />
+            -	Informe de actividades realizadas según términos de referencia.
+            <br />
+            -	Comprobante de Pago.
+            <br />
+            -	Copia de la Orden de Servicio.
+            <br />
+            -	Suspensión de 4ta Categoría según corresponda.
             <br />
             3. El plazo de entrega sera computado desde el día siguientede confirmada la Orden de Compra/Servicio, para efectos de cobro de penalidad.
             <br />
-            4. La penalidad se aplicara de acuerdo a lo establecido en la Directiva N° 002-2023-GRA/OPDI (10% del monto total de la Orden de Compra/Servicio)
+            4. La penalidad se aplicara de acuerdo a lo establecido en la Directiva N° 002-2023-GRA/OPDI (hasta el 10% del monto total de la Orden de Compra/Servicio)
             <br />
             5. Se aplicara penalidad al monto total de la Orden de Compra/Servicio, en caso de la cancelación de esta.
           </>
@@ -46,13 +62,13 @@ const Inicio = ({setTitle}) => {
             PRESENTACIÓN DE PROPUESTAS Y PLAZOS
           </strong>
         }
-
-
         description={
           <>
-            1. Por correo electrónico: <strong>servicios@pems.pe / compras@pems.pe</strong>
+            1. Por correo electrónico: <strong>servicios@pems.pe / compras@pems.pe o Tramite Documentario.</strong>
             <br />
             2. En el asunto del correo se deberá colocar el numero de solicitud, la fecha limite de presentación de procesos via correo electrónico es de 2 diás hábiles.
+            <br />
+            3. Para las Cotizaciones no se aceptara el pegado de la imagen de una firma o visto.
           </>
         }
         type="warning"
