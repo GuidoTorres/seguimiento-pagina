@@ -178,7 +178,7 @@ const Bienes = ({ setTitle }) => {
 
                 </Flex>
 
-                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción' style={{ marginTop: "10px", width: "300px", }} />
+                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción o nro de solicitud' style={{ marginTop: "10px", width: "300px", }} />
 
                 <Table
                     columns={columns}
