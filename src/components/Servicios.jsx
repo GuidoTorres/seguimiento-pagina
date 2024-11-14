@@ -91,8 +91,9 @@ const Servicios = ({ setTitle }) => {
         const value = e.target.value;
         setSearchTerm(value);
 
-        const filterData = servicios.filter(item =>
-            item.glosa.toLowerCase().includes(value.toLowerCase())
+        const filterData = servicios.filter(item => 
+            item?.glosa?.toLowerCase()?.includes(value.toLowerCase()) ||
+            (item?.secSolMod && item.secSolMod === parseInt(value))
         );
 
         setFilteredData(filterData);

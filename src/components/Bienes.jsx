@@ -89,8 +89,9 @@ const Bienes = ({ setTitle }) => {
         const value = e.target.value;
         setSearchTerm(value);
 
-        const filterData = bienes.filter(item =>
-            item?.glosa?.toLowerCase()?.includes(value?.toLowerCase())
+        const filterData = bienes.filter(item => 
+            item?.glosa?.toLowerCase()?.includes(value.toLowerCase()) ||
+            (item?.secSolMod && item.secSolMod === parseInt(value))
         );
         setFilteredData(filterData);
     };
