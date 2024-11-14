@@ -114,7 +114,7 @@ const Servicios = ({ setTitle }) => {
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/CARTA%20CCI.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/CARTA%20CCI.pdf", "_blank");
 
                                         }}
                                     />
@@ -124,7 +124,7 @@ const Servicios = ({ setTitle }) => {
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/DECLACION%20JURADA%20-%20FORMATOS%20PARA%20PROVEEDORES.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/DECLACION%20JURADA%20-%20FORMATOS%20PARA%20PROVEEDORES.pdf", "_blank");
 
                                         }}
                                     />  </Tooltip>
@@ -133,7 +133,7 @@ const Servicios = ({ setTitle }) => {
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/DECLARACION%20JURADA%20PARENTESCO%20NEPOTISMO.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/DECLARACION%20JURADA%20PARENTESCO%20NEPOTISMO.pdf", "_blank");
 
                                         }}
                                     />  </Tooltip>
@@ -142,7 +142,7 @@ const Servicios = ({ setTitle }) => {
                                 <Tooltip title="FORMATO DE COTIZACIÓN DE SERVICIOS">
                                     <FileExcelOutlined style={{ color: "green", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/FORMATO%20DE%20COTIZACION%20DE%20SERVICIOS.xlsx", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/FORMATO%20DE%20COTIZACION%20DE%20SERVICIOS.xlsx", "_blank");
 
                                         }} />
 
@@ -150,7 +150,7 @@ const Servicios = ({ setTitle }) => {
                                 <Tooltip title="FORMATO DE DECLARACION JURADA INCOMPATIBILIDADES">
                                     <FilePdfOutlined style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/FORMATO-DE-DECLARACI%C3%93N-JURADA-INCOMPATIBILIDADES.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/FORMATO-DE-DECLARACI%C3%93N-JURADA-INCOMPATIBILIDADES.pdf", "_blank");
 
                                         }} />
 

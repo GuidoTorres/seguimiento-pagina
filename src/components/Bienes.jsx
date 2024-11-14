@@ -109,7 +109,7 @@ const Bienes = ({ setTitle }) => {
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/CARTA%20CCI.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/CARTA%20CCI.pdf", "_blank");
 
                                         }}
                                     />
@@ -119,7 +119,7 @@ const Bienes = ({ setTitle }) => {
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/FORMATO%2007.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/FORMATO%2007.pdf", "_blank");
 
                                         }}
                                     />  </Tooltip>
@@ -128,7 +128,7 @@ const Bienes = ({ setTitle }) => {
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/FORMATO%2005.pdf", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/FORMATO%2005.pdf", "_blank");
 
                                         }}
                                     />  </Tooltip>
@@ -137,7 +137,7 @@ const Bienes = ({ setTitle }) => {
                                 <Tooltip title="FORMATO N° 06 PROPUESTA ECONOMICA">
                                     <FileWordOutlined style={{ color: "blue", fontSize: "30px" }}
                                         onClick={() => {
-                                            window.open("http://10.30.1.46:8086/uploads/FORMATO%20N%C2%B0%2006%20PROPUESTA%20ECONOMICA.docx", "_blank");
+                                            window.open("https://requerimientos.pems.pe/uploads/FORMATO%20N%C2%B0%2006%20PROPUESTA%20ECONOMICA.docx", "_blank");
 
                                         }} />
 
