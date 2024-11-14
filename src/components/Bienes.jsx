@@ -40,6 +40,11 @@ const Bienes = ({ setTitle }) => {
             align: "center",
         },
         {
+            title: <div style={{ textAlign: "center" }}>SOLICITUD</div>,
+            dataIndex: "secSolMod",
+            align: "center",
+        },
+        {
             title: <div style={{ textAlign: "center" }}>DESCRIPCIÓN</div>,
             dataIndex: "glosa",
             align: "left",

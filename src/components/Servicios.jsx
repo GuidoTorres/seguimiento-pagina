@@ -38,7 +38,12 @@ const Servicios = ({ setTitle }) => {
                     COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
                 </p>
             ),
-            align: "left",
+            align: "center",
+        },
+        {
+            title: <div style={{ textAlign: "center" }}>SOLICITUD</div>,
+            dataIndex: "secSolMod",
+            align: "center",
         },
         {
             title: <div style={{ textAlign: "center" }}>DESCRIPCIÓN</div>,
