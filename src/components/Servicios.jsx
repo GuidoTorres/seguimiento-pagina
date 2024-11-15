@@ -177,7 +177,7 @@ const Servicios = ({ setTitle }) => {
 
                         description={
                             <>
-                                1. Por correo electrónico: <strong>servicios@pems.pe</strong>
+                                1. Por correo electrónico: <strong>servicios@pems.pe o Trámite Documentario de la entidad.</strong>
                                 <br />
                                 2. En el asunto del correo se deberá colocar el numero de solicitud, la fecha limite de presentación de procesos via correo electrónico es de 2 diás hábiles.
                             </>

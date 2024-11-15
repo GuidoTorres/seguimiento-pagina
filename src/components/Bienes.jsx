@@ -165,7 +165,7 @@ const Bienes = ({ setTitle }) => {
 
                         description={
                             <>
-                                1. Por correo electrónico: <strong>compras@pems.pe</strong>
+                                1. Por correo electrónico: <strong>compras@pems.pe o Trámite Documentario de la entidad.</strong>
                                 <br />
                                 2. En el asunto del correo se deberá colocar el número de solicitud.
                                 <br />
@@ -179,7 +179,6 @@ const Bienes = ({ setTitle }) => {
                 </Flex>
 
                 <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción o nro de solicitud' style={{ marginTop: "10px", width: "300px", }} />
-
                 <Table
                     columns={columns}
                     dataSource={filteredData?.map((item, index) => ({
