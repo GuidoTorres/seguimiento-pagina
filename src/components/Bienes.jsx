@@ -65,7 +65,7 @@ const Bienes = ({ setTitle }) => {
             align: "center",
         },
         {
-            title: <div style={{ textAlign: "center" }}>PDF</div>,
+            title: <div style={{ textAlign: "center" }}>ESPECIFICACIONES TÉCNICAS</div>,
             render: (_, record) => (
                 <div>
                     <FilePdfOutlined
@@ -81,7 +81,7 @@ const Bienes = ({ setTitle }) => {
                 </div>
             ),
             key: "action",
-            align: "left",
+            align: "center",
         },
     ];
 

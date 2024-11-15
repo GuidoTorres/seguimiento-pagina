@@ -66,7 +66,7 @@ const Servicios = ({ setTitle }) => {
             align: "center",
         },
         {
-            title: <div style={{ textAlign: "center" }}>PDF</div>,
+            title: <div style={{ textAlign: "center" }}>TÉRMINOS DE REFERENCIA</div>,
             render: (_, record) => (
                 <div>
                     <FilePdfOutlined
@@ -82,7 +82,7 @@ const Servicios = ({ setTitle }) => {
                 </div>
             ),
             key: "action",
-            align: "left",
+            align: "center",
         },
     ];
 
