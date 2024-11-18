@@ -1,0 +1,22 @@
+.inicio {
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -30px;
+}
+.inicio-alert{
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .inicio {
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

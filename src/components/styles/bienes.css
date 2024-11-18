@@ -1,0 +1,22 @@
+.bienes {
+    margin-top: -20px;
+    padding: 0;
+}
+
+.bienes-alert {
+    display: flex;
+    gap: 10px;
+}
+.bienes-input{
+    margin-top: 15px;
+    width: 265px;
+}
+
+@media (max-width: 768px) {
+    .bienes-alert {
+        flex-direction: column;
+    }
+    .bienes-input{
+        width: 100%;
+    }
+}

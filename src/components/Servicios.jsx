@@ -4,6 +4,7 @@ import {
     FilePdfOutlined, FileExcelOutlined
 } from "@ant-design/icons";
 import { Alert, Flex, Tooltip, Table, Input } from 'antd';
+import "./styles/bienes.css"
 const Servicios = ({ setTitle }) => {
     const [servicios, setServicios] = useState([])
     const [searchTerm, setSearchTerm] = useState(""); // Estado para la búsqueda
@@ -91,7 +92,7 @@ const Servicios = ({ setTitle }) => {
         const value = e.target.value;
         setSearchTerm(value);
 
-        const filterData = servicios.filter(item => 
+        const filterData = servicios.filter(item =>
             item?.glosa?.toLowerCase()?.includes(value.toLowerCase()) ||
             (item?.secSolMod && item.secSolMod === parseInt(value))
         );
@@ -100,9 +101,9 @@ const Servicios = ({ setTitle }) => {
     };
 
     return (
-        <div style={{ marginTop: "-20px", paddingLeft: "35px", paddingRight: "35px" }}>
+        <div className='bienes'>
             <>
-                <Flex gap={"10px"}>
+                <div className='bienes-alert'>
                     <Alert
                         message=
                         {
@@ -186,10 +187,11 @@ const Servicios = ({ setTitle }) => {
                         showIcon
                     />
 
-                </Flex>
+                </div>
 
-                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción o nro de solicitud' style={{ marginTop: "10px", width: "300px", }} />
+                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción o solicitud' className='bienes-input' />
                 <Table
+                    scroll={{ x: true }}
                     columns={columns}
                     dataSource={filteredData?.map((item, index) => ({
                         ...item,

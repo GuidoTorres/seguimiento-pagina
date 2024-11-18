@@ -1,14 +1,16 @@
 import { Alert } from 'antd'
 import React, { useEffect } from 'react'
-
+import "./styles/inicio.css"
 const Inicio = ({ setTitle }) => {
   useEffect(() => {
     setTitle("Inicio")
   }, [])
   return (
-    <div style={{ paddingLeft: "45px", paddingRight: "45px", display: "flex", justifyContent: "center", flexDirection: "column" }}>
+    <div className='inicio'>
 
-      <Alert message=
+      <Alert
+      className='inicio-alert'
+      message=
         {
           <strong>
             NOTA
@@ -16,6 +18,8 @@ const Inicio = ({ setTitle }) => {
         }
         description="Las cotizaciones deben provenir de proveedores cuya actividad principal y/o estan directamente relacionadas con el objeto de contratación." type="info" showIcon style={{ marginTop: "10px" }} />
       <Alert
+            className='inicio-alert'
+
         message=
         {
           <strong>

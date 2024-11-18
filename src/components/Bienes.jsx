@@ -4,6 +4,7 @@ import {
     FilePdfOutlined, FileWordOutlined
 } from "@ant-design/icons";
 import { Alert, Flex, Tooltip, Table, Input } from 'antd';
+import "./styles/bienes.css"
 const Bienes = ({ setTitle }) => {
     const [bienes, setBienes] = useState([])
     const [searchTerm, setSearchTerm] = useState(""); // Estado para la búsqueda
@@ -89,17 +90,18 @@ const Bienes = ({ setTitle }) => {
         const value = e.target.value;
         setSearchTerm(value);
 
-        const filterData = bienes.filter(item => 
+        const filterData = bienes.filter(item =>
             item?.glosa?.toLowerCase()?.includes(value.toLowerCase()) ||
             (item?.secSolMod && item.secSolMod === parseInt(value))
         );
         setFilteredData(filterData);
     };
     return (
-        <div style={{ marginTop: "-20px", paddingLeft: "35px", paddingRight: "35px" }}>
+        <div className='bienes'>
             <>
-                <Flex gap={"10px"}>
+                <div className='bienes-alert'>
                     <Alert
+
                         message=
                         {
                             <strong>
@@ -155,6 +157,7 @@ const Bienes = ({ setTitle }) => {
                         showIcon
                     />
                     <Alert
+
                         message=
                         {
                             <strong>
@@ -175,18 +178,18 @@ const Bienes = ({ setTitle }) => {
                         type="warning"
                         showIcon
                     />
+                </div>
 
-                </Flex>
-
-                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción o nro de solicitud' style={{ marginTop: "10px", width: "300px", }} />
+                <Input onChange={e => handleSearch(e)} placeholder='Buscar por descripción o solicitud' className='bienes-input' />
                 <Table
+                    scroll={{ x: true }}
                     columns={columns}
                     dataSource={filteredData?.map((item, index) => ({
                         ...item,
                         key: item.id || index,
                     }))}
+                    
                     style={{ marginTop: "20px" }}
-
                 />
             </>
         </div>
