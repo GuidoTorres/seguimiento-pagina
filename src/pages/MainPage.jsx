@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from '../components/Sidebar';
 import { Button, Layout } from "antd";
 import "./styles/mainPage.css";
@@ -14,6 +14,28 @@ const { Sider, Header, Content } = Layout;
 const MainPage = () => {
     const [collapsed, setCollapsed] = useState(false);
     const [title, setTitle] = useState("Inicio");
+
+    useEffect(() => {
+        // Función para manejar el cambio de tamaño de la ventana
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setCollapsed(true); // Colapsa si el ancho es menor a 768px
+            } else {
+                setCollapsed(false); // Expande si el ancho es mayor o igual a 768px
+            }
+        };
+
+        // Configurar el evento de redimensionamiento
+        window.addEventListener("resize", handleResize);
+
+        // Comprobación inicial
+        handleResize();
+
+        // Limpiar el evento al desmontar el componente
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <Layout>

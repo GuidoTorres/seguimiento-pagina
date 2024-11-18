@@ -43,6 +43,10 @@
   }
   
   @media (max-width: 768px) {
+    .header {
+      padding-left: 15px;
+      margin-top: -10px;
+    }
     .content {
       margin: 14px 6px;
       padding: 10px;

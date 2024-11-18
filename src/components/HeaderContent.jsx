@@ -2,13 +2,13 @@
   import { Avatar, Flex, Popover, Typography } from "antd";
   import React from "react";
 //   import { useNavigate } from "react-router-dom";
-  
+  import "./styles/headerContent.css"
   const HeaderContent = ({ title }) => {
     // const navigate = useNavigate();
   
     return (
       <Flex align="center" justify="space-between">
-        <div style={{ marginTop: "-20px", marginLeft:"20px" }}>
+        <div className="header-content">
           <Typography.Title level={4} >
             {title}
           </Typography.Title>
