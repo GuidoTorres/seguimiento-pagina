@@ -69,18 +69,21 @@ const Servicios = ({ setTitle }) => {
         {
             title: <div style={{ textAlign: "center" }}>TÉRMINOS DE REFERENCIA</div>,
             render: (_, record) => (
-                <div>
-                    <FilePdfOutlined
-                        style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
-                        onClick={() => {
-                            if (record.pdf) {
-                                window.open(record.pdf, "_blank");
-                            } else {
-                                alert("No hay PDF disponible para este registro.");
-                            }
-                        }}
-                    />
-                </div>
+
+                record?.terminado ?
+                    <p style={{ color: "red" }}>FINALIZADO</p> :
+                    <div>
+                        <FilePdfOutlined
+                            style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
+                            onClick={() => {
+                                if (record.pdf) {
+                                    window.open(record.pdf, "_blank");
+                                } else {
+                                    alert("No hay PDF disponible para este registro.");
+                                }
+                            }}
+                        />
+                    </div>
             ),
             key: "action",
             align: "center",
@@ -116,7 +119,15 @@ const Servicios = ({ setTitle }) => {
                         description={
                             <Flex gap={"20px"} justify="center" align="center">
 
+                                <Tooltip title="ORDEN DE PRESENTACIÓN DE DOCUMENTOS">
+                                    <FilePdfOutlined
+                                        style={{ color: "red", fontSize: "30px" }}
+                                        onClick={() => {
+                                            window.open("https://requerimientos.pems.pe/uploads/Orden-de-Presentacion-Orden-de-Servicio.pdf", "_blank");
 
+                                        }}
+                                    />
+                                </Tooltip>
                                 <Tooltip title="CARTA CCI">
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
@@ -181,6 +192,9 @@ const Servicios = ({ setTitle }) => {
                                 1. Por correo electrónico: <strong>servicios@pems.pe o Trámite Documentario de la entidad.</strong>
                                 <br />
                                 2. En el asunto del correo se deberá colocar el numero de solicitud, la fecha limite de presentación de procesos via correo electrónico es de 2 diás hábiles.
+                                <br />
+                                3. <strong>Las propuestas deberán presentarse en formato PDF.</strong>
+
                             </>
                         }
                         type="warning"

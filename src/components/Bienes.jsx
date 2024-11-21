@@ -68,18 +68,21 @@ const Bienes = ({ setTitle }) => {
         {
             title: <div style={{ textAlign: "center" }}>ESPECIFICACIONES TÉCNICAS</div>,
             render: (_, record) => (
-                <div>
-                    <FilePdfOutlined
-                        style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
-                        onClick={() => {
-                            if (record.pdf) {
-                                window.open(record.pdf, "_blank");
-                            } else {
-                                alert("No hay PDF disponible para este registro.");
-                            }
-                        }}
-                    />
-                </div>
+                record?.terminado ?
+
+                    <p style={{color:"red"}}> FINALIZADO</p> :
+                    <div>
+                        <FilePdfOutlined
+                            style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
+                            onClick={() => {
+                                if (record.pdf) {
+                                    window.open(record.pdf, "_blank");
+                                } else {
+                                    alert("No hay PDF disponible para este registro.");
+                                }
+                            }}
+                        />
+                    </div>
             ),
             key: "action",
             align: "center",
@@ -188,7 +191,7 @@ const Bienes = ({ setTitle }) => {
                         ...item,
                         key: item.id || index,
                     }))}
-                    
+
                     style={{ marginTop: "20px" }}
                 />
             </>
