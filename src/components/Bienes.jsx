@@ -70,7 +70,7 @@ const Bienes = ({ setTitle }) => {
             render: (_, record) => (
                 record?.terminado ?
 
-                    <p style={{color:"red"}}> FINALIZADO</p> :
+                    <p style={{ color: "red" }}> FINALIZADO</p> :
                     <div>
                         <FilePdfOutlined
                             style={{ color: record.pdf ? "red" : "grey", cursor: "pointer" }}
@@ -115,7 +115,15 @@ const Bienes = ({ setTitle }) => {
 
                         description={
                             <Flex gap={"20px"} justify="center" align="center">
+                                <Tooltip title="ORDEN DE PRESENTACIÓN DE DOCUMENTOS">
+                                    <FilePdfOutlined
+                                        style={{ color: "red", fontSize: "30px" }}
+                                        onClick={() => {
+                                            window.open("https://requerimientos.pems.pe/uploads/orden-presentacion-compras.pdf", "_blank");
 
+                                        }}
+                                    />
+                                </Tooltip>
                                 <Tooltip title="CARTA CCI">
                                     <FilePdfOutlined
                                         style={{ color: "red", fontSize: "30px" }}
