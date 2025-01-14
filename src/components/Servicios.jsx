@@ -33,7 +33,7 @@ const Servicios = ({ setTitle }) => {
 
     const columns = [
         {
-            title: <div style={{ textAlign: "center" }}>NOMBRE</div>,
+            title: <div style={{ textAlign: "center" }}>REQUERIMIENTO</div>,
             render: (_, record) => (
                 <p>
                     COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
@@ -42,7 +42,7 @@ const Servicios = ({ setTitle }) => {
             align: "center",
         },
         {
-            title: <div style={{ textAlign: "center" }}>SOLICITUD</div>,
+            title: <div style={{ textAlign: "center" }}>PEDIDO</div>,
             dataIndex: "secSolMod",
             align: "center",
         },
