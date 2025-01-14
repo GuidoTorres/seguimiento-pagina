@@ -36,7 +36,7 @@ const Servicios = ({ setTitle }) => {
             title: <div style={{ textAlign: "center" }}>REQUERIMIENTO</div>,
             render: (_, record) => (
                 <p>
-                    COTIZACIÓN N° {record.correlativo} - {dayjs().format("YYYY")}
+                    N° {record.correlativo} - {dayjs().format("YYYY")}
                 </p>
             ),
             align: "center",
