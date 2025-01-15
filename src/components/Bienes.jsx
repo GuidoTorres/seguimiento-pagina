@@ -179,9 +179,9 @@ const Bienes = ({ setTitle }) => {
 
                         description={
                             <>
-                                1. Por correo electrónico: <strong>compras@pems.pe o Trámite Documentario de la entidad.</strong>
+                                1. Por correo electrónico: <strong>compras@pems.pe o Trámite Documentario de la entidad. Con copia al correo logistica_control@pems.pe .</strong>
                                 <br />
-                                2. En el asunto del correo se deberá colocar el número de solicitud.
+                                2. En el asunto del correo se deberá colocar el número de pedido.
                                 <br />
                                 3. En caso de bienes específicos adjuntar la <strong>Ficha Técnica</strong> del producto ofertado.
                             </>
