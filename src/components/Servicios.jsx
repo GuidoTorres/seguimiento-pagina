@@ -183,7 +183,7 @@ const Servicios = ({ setTitle }) => {
                     style={{ color: "red", fontSize: "30px" }}
                     onClick={() => {
                       window.open(
-                        "https://requerimientos.pems.pe/uploads/FORMATO-Y-ANEXOS-DE-COTIZACIÓN-SERVICIOS.pdf",
+                        "https://requerimientos.pems.pe/uploads/FORMATO-Y-ANEXOS-DE-COTIZACION-SERVICIOS.pdf",
                         "_blank"
                       );
                     }}
