@@ -109,75 +109,6 @@ const Servicios = ({ setTitle }) => {
             message={<strong>ANEXOS:</strong>}
             description={
               <Flex gap={"20px"} justify="center" align="center">
-                <Tooltip title="ORDEN DE PRESENTACIÓN DE DOCUMENTOS">
-                  <FilePdfOutlined
-                    style={{ color: "red", fontSize: "30px" }}
-                    onClick={() => {
-                      window.open(
-                        "https://requerimientos.pems.pe/uploads/Orden-de-Presentacion-Orden-de-Servicio.pdf",
-                        "_blank"
-                      );
-                    }}
-                  />
-                </Tooltip>
-                <Tooltip title="CARTA CCI">
-                  <FilePdfOutlined
-                    style={{ color: "red", fontSize: "30px" }}
-                    onClick={() => {
-                      window.open(
-                        "https://requerimientos.pems.pe/uploads/CARTA%20CCI.pdf",
-                        "_blank"
-                      );
-                    }}
-                  />
-                </Tooltip>
-
-                <Tooltip title="DECLARACION JURADA - FORMATOS PARA PROVEEDORES">
-                  <FilePdfOutlined
-                    style={{ color: "red", fontSize: "30px" }}
-                    onClick={() => {
-                      window.open(
-                        "https://requerimientos.pems.pe/uploads/DECLACION%20JURADA%20-%20FORMATOS%20PARA%20PROVEEDORES.pdf",
-                        "_blank"
-                      );
-                    }}
-                  />{" "}
-                </Tooltip>
-
-                <Tooltip title="DECLARACIÓN JURADA PARENTESCO NEPOTISMO">
-                  <FilePdfOutlined
-                    style={{ color: "red", fontSize: "30px" }}
-                    onClick={() => {
-                      window.open(
-                        "https://requerimientos.pems.pe/uploads/DECLARACION%20JURADA%20PARENTESCO%20NEPOTISMO.pdf",
-                        "_blank"
-                      );
-                    }}
-                  />{" "}
-                </Tooltip>
-
-                <Tooltip title="FORMATO DE COTIZACIÓN DE SERVICIOS">
-                  <FileExcelOutlined
-                    style={{ color: "green", fontSize: "30px" }}
-                    onClick={() => {
-                      window.open(
-                        "https://requerimientos.pems.pe/uploads/FORMATO%20DE%20COTIZACION%20DE%20SERVICIOS.xlsx",
-                        "_blank"
-                      );
-                    }}
-                  />
-                </Tooltip>
-                <Tooltip title="FORMATO DE DECLARACION JURADA INCOMPATIBILIDADES">
-                  <FilePdfOutlined
-                    style={{ color: "red", fontSize: "30px" }}
-                    onClick={() => {
-                      window.open(
-                        "https://requerimientos.pems.pe/uploads/FORMATO-DE-DECLARACI%C3%93N-JURADA-INCOMPATIBILIDADES.pdf",
-                        "_blank"
-                      );
-                    }}
-                  />
-                </Tooltip>
                 <Tooltip title="FORMATO Y ANEXOS DE COTIZACIÓN SERVICIOS">
                   <FilePdfOutlined
                     style={{ color: "red", fontSize: "30px" }}
@@ -200,8 +131,9 @@ const Servicios = ({ setTitle }) => {
               <>
                 1. Por correo electrónico:{" "}
                 <strong>
-                  servicios@pems.pe o Trámite Documentario de la entidad. Con
-                  copia al correo logistica_control@pems.pe .
+                  servicios@pems.pe, con copia al correo
+                  logistica_control@pems.pe o Trámite Documentario de la
+                  entidad.
                 </strong>
                 <br />
                 2. En el asunto del correo se deberá colocar el número de
