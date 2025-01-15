@@ -131,19 +131,21 @@ const Servicios = ({ setTitle }) => {
               <>
                 1. Por correo electrónico:{" "}
                 <strong>
-                  servicios@pems.pe, con copia al correo
-                  logistica_control@pems.pe o Trámite Documentario de la
-                  entidad.
+                  servicios@pems.pe o Trámite Documentario de la entidad.
                 </strong>
                 <br />
                 2. En el asunto del correo se deberá colocar el número de
-                pedido, la fecha limite de presentación de procesos via correo
-                electrónico es de 2 días hábiles.
+                solicitud (ejemplo: REMITO COTIZACION DEL PEDIDO NRO 0001-2025)
                 <br />
                 3.{" "}
                 <strong>
-                  Las propuestas deberán presentarse en formato PDF.
+                  Las propuestas deberán presentarse en formato PDF (único
+                archivo)
                 </strong>
+                , adjuntando la siguiente información: Ficha Ruc,
+                constancia de RNP, suspensión de 4ta categoría (en caso
+                corresponda), demás documentación que cumpla los Términos de
+                Referencia, caso contrario su propuesta será no admitida.
               </>
             }
             type="warning"
