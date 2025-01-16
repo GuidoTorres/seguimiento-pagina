@@ -113,12 +113,12 @@ const Servicios = ({ setTitle }) => {
       <>
         <div className="bienes-alert">
           <Alert
-            message={<strong>ANEXOS:</strong>}
+            message={<strong >ANEXOS:</strong>}
             description={
-              <Flex gap={"20px"} justify="center" align="center">
+              <Flex gap={"20px"} justify="center" align="center" style={{marginTop:"20px"}}>
                 <Tooltip title="FORMATO Y ANEXOS DE COTIZACIÓN SERVICIOS">
                   <FilePdfOutlined
-                    style={{ color: "red", fontSize: "30px" }}
+                    style={{ color: "red", fontSize: "50px" }}
                     onClick={() => {
                       window.open(
                         "https://requerimientos.pems.pe/uploads/FORMATO-Y-ANEXOS-DE-COTIZACION-SERVICIOS.pdf",
@@ -140,6 +140,7 @@ const Servicios = ({ setTitle }) => {
                 <strong>
                   servicios@pems.pe o Trámite Documentario de la entidad.
                 </strong>
+                  Horario de recepción desde 8:00 A.M. Hasta 16:00 P.M.
                 <br />
                 2. En el asunto del correo se deberá colocar el número de
                 solicitud (ejemplo: REMITO COTIZACION DEL PEDIDO NRO 0001-2025)
