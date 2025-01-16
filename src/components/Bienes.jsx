@@ -56,12 +56,12 @@ const Bienes = ({ setTitle }) => {
             align: "center",
         },
         {
-            title: <div style={{ textAlign: "center" }}>FECHA DE PUBLICACIÓN</div>,
+            title: <div style={{ textAlign: "center" }}>PUBLICACIÓN</div>,
             dataIndex: "fecha",
             align: "center",
         },
         {
-            title: <div style={{ textAlign: "center" }}>FECHA DE VENCIMIENTO</div>,
+            title: <div style={{ textAlign: "center" }}>VENCIMIENTO</div>,
             dataIndex: "fecha_vencimiento",
             align: "center",
         },

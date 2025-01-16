@@ -32,11 +32,18 @@ const Servicios = ({ setTitle }) => {
   const columns = [
     {
       title: <div style={{ textAlign: "center" }}>REQUERIMIENTO</div>,
-      render: (_, record) => (
-        <p>
-          N° {record.correlativo} - {dayjs().format("YYYY")}
-        </p>
-      ),
+      render: (_, record) => {
+        const correlativoStr = String(record.correlativo); // Convertir a string
+        const correlativoConCeros = correlativoStr.padStart(4, "0"); // Rellenar con ceros hasta 4 dígitos
+
+        return (
+          <p style={{ textAlign: "center" }}>
+            {" "}
+            {/* Centrar el texto */}
+            N° {correlativoConCeros} - {dayjs().format("YYYY")}
+          </p>
+        );
+      },
       align: "center",
     },
     {
@@ -55,12 +62,12 @@ const Servicios = ({ setTitle }) => {
       align: "left",
     },
     {
-      title: <div style={{ textAlign: "center" }}>FECHA DE PUBLICACIÓN</div>,
+      title: <div style={{ textAlign: "center" }}>PUBLICACIÓN</div>,
       dataIndex: "fecha",
       align: "center",
     },
     {
-      title: <div style={{ textAlign: "center" }}>FECHA DE VENCIMIENTO</div>,
+      title: <div style={{ textAlign: "center" }}>VENCIMIENTO</div>,
       dataIndex: "fecha_vencimiento",
       align: "center",
     },
@@ -140,12 +147,12 @@ const Servicios = ({ setTitle }) => {
                 3.{" "}
                 <strong>
                   Las propuestas deberán presentarse en formato PDF (único
-                archivo)
+                  archivo)
                 </strong>
-                , adjuntando la siguiente información: Ficha Ruc,
-                constancia de RNP, suspensión de 4ta categoría (en caso
-                corresponda), demás documentación que cumpla los Términos de
-                Referencia, caso contrario su propuesta será no admitida.
+                , adjuntando la siguiente información: Ficha Ruc, constancia de
+                RNP, suspensión de 4ta categoría (en caso corresponda), demás
+                documentación que cumpla los Términos de Referencia, caso
+                contrario su propuesta será no admitida.
               </>
             }
             type="warning"
