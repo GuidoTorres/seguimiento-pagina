@@ -143,7 +143,7 @@ const Servicios = ({ setTitle }) => {
               <>
                 1. Por correo electrónico:{" "}
                 <strong>
-                  servicios@pems.pe o Trámite Documentario de la entidad.
+                 servicios@pems.pe con copia al correo logistica_control@pems.pe o Trámite Documentario. 
                 </strong>
                 Horario de recepción desde 8:00 A.M. Hasta 16:00 P.M.
                 <br />
