@@ -40,7 +40,7 @@ const Inicio = ({ setTitle }) => {
             <br />
             La conformidad de los servicios se presentará al día siguiente hábil después de culminado la orden de servicio, adjuntando los siguientes documentos por Tramite Documentario:
             <br />
-            -	Informe de actividades realizadas según términos de referencia.
+            -	Carta de actividades realizadas según términos de referencia.
             <br />
             -	Comprobante de Pago.
             <br />
