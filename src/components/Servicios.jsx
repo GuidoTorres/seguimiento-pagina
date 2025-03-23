@@ -68,7 +68,7 @@ const Servicios = ({ setTitle }) => {
     },
     {
       title: <div style={{ textAlign: "center" }}>VENCIMIENTO</div>,
-      dataIndex: "fecha_vencimiento",
+      dataIndex: "fin",
       align: "center",
     },
     {
